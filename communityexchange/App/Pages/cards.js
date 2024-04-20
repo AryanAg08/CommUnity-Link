@@ -17,7 +17,7 @@ const Card = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.137.180:4000/all-communities');
+        const response = await fetch('http://192.168.137.1:4000/all-communities');
         const data = await response.json();
         console.log(data);
         setCommunities(data.communities);
