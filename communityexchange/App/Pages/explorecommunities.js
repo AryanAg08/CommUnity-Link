@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { ScrollView,View, Text, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
 
 const CommunityCards = ({ communities }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Communities</Text>
-      <View style={styles.cardContainer}>
+      <ScrollView>
+       <View style={styles.cardContainer}>
         {communities.map((community, index) => (
           <View key={index} style={[styles.cta, styles.cardShadow]}>
             <View style={styles.textColumn}>
@@ -21,6 +22,7 @@ const CommunityCards = ({ communities }) => {
           </View>
         ))}
       </View>
+      </ScrollView>
     </View>
   );
 };
@@ -60,6 +62,7 @@ const CommunityScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    
     justifyContent: 'center',
     alignItems: 'left',
     backgroundColor: '#f0f0f0',
@@ -89,6 +92,7 @@ const styles = StyleSheet.create({
   textColumn: {
     flex: 1,
     padding: 20,
+    
   },
   heading: {
     fontSize: 18,

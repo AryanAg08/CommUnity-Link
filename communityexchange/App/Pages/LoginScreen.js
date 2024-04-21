@@ -134,7 +134,7 @@ const AuthScreen = ({ navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.appName}>CommUnity-Link</Text>
-
+      
       {!showLogin && !showRegistration && (
         <View>
           <TouchableOpacity onPress={handleLoginClick}>
@@ -288,6 +288,8 @@ const AuthScreen = ({ navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
+    
+    backgroundColor:'#B5C0D0',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -298,10 +300,21 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    shadowColor:'black',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    backgroundColor:'#EED3D9',
+    borderRadius:"2rem",
+    width:'10rem',
+    textAlign:'center',
+    fontSize: 15,
+    // fontWeight: 'bold',
     marginBottom: 10,
-    color: 'blue',
+    color: 'black',
+    textShadowColor: '#F5E8DD', // Shadow color
+    textShadowOffset: { width: 2, height: 2 }, // Shadow offset
+    textShadowRadius: 5,
   },
   formContainer: {
     width: '80%',
