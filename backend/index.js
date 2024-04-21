@@ -15,16 +15,16 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 
 // Connect to MongoDB
-// mongo.connect(process.env.mongo, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// })
-//     .then(() => {
-//         console.log("Connected to MongoDB");
-//     })
-//     .catch((error) => {
-//         console.error("Failed to connect to MongoDB:", error);
-//     });
+mongo.connect(process.env.mongo, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => {
+        console.log("Connected to MongoDB");
+    })
+    .catch((error) => {
+        console.error("Failed to connect to MongoDB:", error);
+    });
 
 // Define routes
 app.get("/", (req, res) => {

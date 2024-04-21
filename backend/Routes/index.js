@@ -1,24 +1,25 @@
 const router = require('express').Router();
 const User = require("../models/1.User");
+const jwt = require("jsonwebtoken");
 
 router.post("/register-user", async (req, res) => {
-  const {Name, Email, password, phone } = req.body;
+  const {Name, Email, password, phone } = req.body.reguser;
    console.log(req.body);
-   return res
-        .status(200)
-        .json({ message: "Email and the password are required" });
-//   const newUser = new User({ Name, email, password, phone });
+//    return res
+//         .status(200)
+//         .json({ message: "Email and the password are required" });
+  const newUser = new User({ Name, Email, password, phone });
 
-//   // save the user to the database
-//   newUser
-//     .save()
-//     .then(() => {
-//       res.status(200).json({ message: "User registered successfully" });
-//     })
-//     .catch((err) => {
-//       console.log("Error registering user", err);
-//       res.status(500).json({ message: "Error registering the user!" });
-//     });
+  // save the user to the database
+  newUser
+    .save()
+    .then(() => {
+      res.status(200).json({ message: "User registered successfully" });
+    })
+    .catch((err) => {
+      console.log("Error registering user", err);
+      res.status(500).json({ message: "Error registering the user!" });
+    });
 });
 
 router.post("/register-community", async (req, res) => {
@@ -51,28 +52,28 @@ const createToken = (userId) => {
         .json({ message: "Email and the password are required" });
     }
 
-    res.status(200).json({ message: "User logged in successfully" });
+   // res.status(200).json({ message: "User logged in successfully" });
   
     //check for that user in the database
-    // User.findOne({ email })
-    //   .then((user) => {
-    //     if (!user) {
-    //       //user not found
-    //       return res.status(404).json({ message: "User not found" });
-    //     }
+    User.findOne({ Email: email })
+      .then((user) => {
+        if (!user) {
+          //user not found
+          return res.status(404).json({ message: "User not found" });
+        }
   
-    //     //compare the provided passwords with the password in the database
-    //     if (user.password !== password) {
-    //       return res.status(404).json({ message: "Invalid Password!" });
-    //     }
+        //compare the provided passwords with the password in the database
+        if (user.password !== password) {
+          return res.status(404).json({ message: "Invalid Password!" });
+        }
   
-    //     const token = createToken(user._id);
-    //     res.status(200).json({ token });
-    //   })
-    //   .catch((error) => {
-    //     console.log("error in finding the user", error);
-    //     res.status(500).json({ message: "Internal server Error!" });
-    //   });
+        const token = createToken(user._id);
+        res.status(200).json({ token });
+      })
+      .catch((error) => {
+        console.log("error in finding the user", error);
+        res.status(500).json({ message: "Internal server Error!" });
+      });
   });
 
   router.get("/users/:userId", (req, res) => {
@@ -107,6 +108,11 @@ const createToken = (userId) => {
             description: "This is the third community",
             members: 300,
             },
+            {
+                name: "Community 4",
+                description: "This is the fourth community",
+                members: 400,
+            }
         ],
         };
      return res.send(data);
