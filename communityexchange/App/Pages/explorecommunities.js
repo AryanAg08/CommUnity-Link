@@ -32,7 +32,7 @@ const CommunityScreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.43.34:4000/all-communities');
+        const response = await fetch('http://localhost:4000/all-communities');
         const data = await response.json();
         console.log(data);
         setCommunities(data.communities);
