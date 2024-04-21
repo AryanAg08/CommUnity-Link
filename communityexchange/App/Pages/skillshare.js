@@ -7,7 +7,7 @@ const CommunityDetailsScreen = () => {
       <Text style={styles.welcomeText}>Welcome to SkillShare Community!</Text>
       <View style={styles.box}>
         <Image
-          source={require('../assets/skillshare.png')}
+          source={require('../assets/skill.png')}
           style={styles.logo}
         />
         <Text style={styles.heading}>SkillShare Community</Text>
