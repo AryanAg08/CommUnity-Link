@@ -7,18 +7,24 @@ const CommunityDetailsScreena = () => {
       <Text style={styles.welcomeText}>Welcome to NGO Exchange Network!</Text>
       <View style={styles.box}>
         <Image
-          source={require('../assets/ngo.png')}
+          source={require('../assets/red.png')}
           style={styles.logo}
         />
-        <Text style={styles.heading}>NGO Exchange Network</Text>
+        <Text style={styles.heading}>Red dot</Text>
         <Text style={styles.description}>
-          The NGO Exchange Network is a global platform dedicated to fostering collaboration and partnership among non-governmental organizations (NGOs) worldwide. Our mission is to drive impactful community change by facilitating cooperation, sharing best practices, and amplifying our collective impact on society. By joining our network, NGOs gain access to a diverse community of like-minded organizations, resources, and opportunities for collaboration. Together, we work towards common goals, share expertise, and address pressing social issues to create positive change in communities around the world.
+        The red dot isn't just a mark; it's a call to action. Like the red light at intersections, 
+        it signals danger and prompts us to stop and take notice.
+         With urgency in our symbol, we emphasize the importance of addressing road safety head-on.
         </Text>
         <Text style={styles.description}>
-
-Our platform provides NGOs with a range of tools and resources to support their work, including networking opportunities, knowledge sharing, capacity building workshops, and funding opportunities. Whether you're a grassroots organization or a large-scale NGO, the NGO Exchange Network offers a space for collaboration, innovation, and collective action.
-
-Join us in our mission to build a better world, one community at a time. Together, we can make a difference and create lasting change for future generations.
+Activities:
+From workshops to audits, we're hands-on in our approach. We educate in schools, assess hazardous conditions, and work closely with authorities to implement life-saving measures like signage and crossings. Policy changes and stricter enforcement? We're all for it.
+Impact:
+Our efforts aren't just talk; they're tangible results. Thanks to our initiatives, accidents and fatalities are on the decline. We're making streets safer, one step at a time.
+Expansion:
+What started in Pune is now a movement across India. Our grassroots approach has sparked similar initiatives nationwide, amplifying our influence and reshaping the road safety landscape.
+Join Us:
+At Red Dot, we're not just advocates; we're changemakers. Together, let's pave the way to safer streets and brighter futures. Join us in making a difference.
         </Text>
       </View>
     </View>

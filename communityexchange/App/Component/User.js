@@ -11,7 +11,7 @@ const User = ({ item }) => {
     const fetchFriendRequests = async () => {
       try {
         const response = await fetch(
-          `http://192.168.43.34:4000/friend-requests/sent/${userId}`
+          `http://localhost:4000/friend-requests/sent/${userId}`
         );
 
         const data = await response.json();

@@ -32,7 +32,7 @@ const AuthScreen = ({ navigation}) => {
     console.log("login!!")
     try {
         // Make the API request to your endpoint
-        const response = await axios.post('http://192.168.43.34:4000/login', {
+        const response = await axios.post('http://localhost:4000/login', {
           email: email,
           password: password,
         });
@@ -85,7 +85,7 @@ const AuthScreen = ({ navigation}) => {
     console.log("Individual Registration!!");
     console.log(regcomm);
     try {
-      const response = await axios.post('http://192.168.43.34:4000/register-community', {
+      const response = await axios.post('http://localhost:4000/register-community', {
        regcomm
        ,
       });
@@ -110,7 +110,7 @@ const AuthScreen = ({ navigation}) => {
       console.log("Individual Registration!!");
       console.log(reguser);
       try {
-        const response = await axios.post('http://192.168.43.34:4000/register-user', {
+        const response = await axios.post('http://localhost:4000/register-user', {
          reguser,
         });
           console.log(response)

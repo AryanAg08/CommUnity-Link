@@ -32,7 +32,7 @@ const CommunityScreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.43.34:4000/all-communities');
+        const response = await fetch('http://localhost:4000/all-communities');
         const data = await response.json();
         console.log(data);
         setCommunities(data.communities);
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'left',
     backgroundColor: '#f0f0f0',
   },
   title: {
@@ -70,17 +70,20 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   cardContainer: {
-    alignItems: 'center',
+    flexDirection: 'row',
+    alignItems: 'center', // Center cards vertically
+
   },
   cta: {
     flexDirection: 'row',
-    backgroundColor: '#e5eff7',
+    backgroundColor: '#f0ffff',
     maxWidth: 400,
     width: '100%',
     borderRadius: 10,
     overflow: 'hidden',
-    borderWidth: 5,
-    borderColor: '#0077cc',
+    borderWidth: 2,
+    marginRight: 13,
+    borderColor: '#000000',
     marginBottom: 20,
   },
   textColumn: {
@@ -97,17 +100,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
-    backgroundColor: '#0077cc',
+    backgroundColor: '#F5E8DD',
     borderRadius: 8,
     paddingVertical: 8,
     paddingHorizontal: 12,
   },
   buttonText: {
-    color: '#fff',
+    color: '#000000',
     fontWeight: 'bold',
   },
   buttonWithBorder: {
-    borderWidth: 2,
+    borderWidth: 0.7,
     borderColor: '#000000', // Set border color to match button text color
   },
   buttonTextCenter: {
