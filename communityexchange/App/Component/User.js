@@ -11,7 +11,7 @@ const User = ({ item }) => {
     const fetchFriendRequests = async () => {
       try {
         const response = await fetch(
-          `http://192.168.43.34:4000/friend-requests/sent/${userId}`
+          `http://localhost:4000/friend-requests/sent/${userId}`
         );
 
         const data = await response.json();
@@ -31,7 +31,7 @@ const User = ({ item }) => {
   useEffect(() => {
     const fetchUserFriends = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/friends/${userId}`);
+        const response = await fetch(`http://localhost:4000/friends/${userId}`);
 
         const data = await response.json();
 
