@@ -89,7 +89,7 @@ const styles={
   homepage:{
     padding:'1rem',
     flex:1,
-    backgroundColor:'#EED3D9',
+    backgroundColor:'#F6F5F2',
     fontSize: 34,
     fontWeight: 'bold',
     color: 'blue',
