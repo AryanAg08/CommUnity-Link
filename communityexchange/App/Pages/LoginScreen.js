@@ -287,6 +287,12 @@ const AuthScreen = ({ navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  buttonText:{
+    textAlign:'center',
+    // justifyContent:'center',
+    paddingTop:'0.3rem',
+    height:'2rem',
+  },
   container: {
     
     backgroundColor:'#B5C0D0',
@@ -325,6 +331,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
     paddingHorizontal: 10,
+    borderRadius:'0.4rem',
+    width:'23rem'
   },
 });
 
