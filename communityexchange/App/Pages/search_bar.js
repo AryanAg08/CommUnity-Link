@@ -22,7 +22,7 @@ const ExchangeActivityScreen = () => {
         onChangeText={text => setSearchText(text)}
         value={searchText}
       />
-      <Button title="Search" onPress={fetchActivities} />
+      <Button title="Search" onPress={fetchActivities} style = {{backgroundColor:"#fffff0" }} />
       <FlatList
         data={activities}
         keyExtractor={item => item.id.toString()}
